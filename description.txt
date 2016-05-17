@@ -1,0 +1,85 @@
+Title:
+Automatic Test-Case Generation Based on Component Descriptions for Open Adaptive Systems
+
+-------------------------------------------------------------------- 
+Short Description:
+The rise of smart eco systems, which combine several systems to new system of systems, put new challenges on the verification and validation (V&V) of such systems.
+Especially safety critical systems require a sound V&V to ensure that unacceptable risks are excluded as well as to provide evidence, that the system is allowed to be operated.
+Due to the possibilities to connect new devices at runtime, the number of possible configurations explodes.
+The large set of possible usages among their interactions cannot be analyzed anymore upfront during the design time. Hence, new techniques are required to enable the V&V at runtime.
+The proposed Thesis should work out a design for a reference architecture for a set of usage scenarios.
+The architecture should enable the safe integration of components at runtime.
+Based on a prototype implementation the proposed solution should be evaluated.
+
+--------------------------------------------------------------------
+The model should be constructed from the components we have.
+The environment in which it is running is related to the components.
+
+For each safety goal fulfilment: bring evidence verification/validation.
+We will use human based reasoning in the verification part, if the configuration is valid.
+
+We consider that the system has interfaces in place, with formal descriptions and formal specifications.
+
+Metrics to be evaluated:
+    transitions ceoverage
+    specs coverage
+
+We assume that we already have unit testing in place.
+We need a form of assesment of how much the already in place documentation offers information about
+the testing environments, classes and runtime entities.
+
+--------------------------------------------------------------------
+Description of the system and starting points of the actual research:
+    We have a model based system.
+    The statical analysis has been already completed.
+    The components have already been tested.
+    The configuration can be mapped:
+        as a connection between variuos nodes (vertices) of the system
+        as a state machine
+    Some configuration combinations can never happen.
+    Respect the IEC 61408 Standard?
+    We have a component feedback loop in some scenarios.
+    Every component in the system has a standardized interface.
+    We may have shared variables in the system.
+    Some states in the system can never be reached.
+
+We need to take into account:
+    HRA - Possible hazards
+    Safety requirements
+    SIL-ISIL Safety Integrity Level
+    Validity of the integration tests we do not know the environment
+    Label transition systems
+
+My contribution:
+    Fixed set of test cases -- measure their level of completness
+    Devise system level test cases
+    System level validation
+    Generate system level test cases
+    Create a prototype project and use mocks to implement it
+    Inter-connect the components
+    Simulate the running project
+    Test coverage definition in terms of safety (critical situation)
+    Branch/loop coverage when it comes to validation
+
+--------------------------------------------------------------------
+These are tools and programming languages to be used:
+    Matlab/Simulink
+    FERAL
+    Java
+    Linux based OS
+
+Tools for architecture modelling and analysis:
+AADL and OSATE
+AADL stands for Architecture analysis and Design Language.
+http://www.aadl.info/aadl/currentsite/
+https://wiki.sei.cmu.edu/aadl/index.php/Osate_2
+FERAL
+
+--------------------------------------------------------------------
+Papers and courses:
+    http://wwwagse.informatik.uni-kl.de/teaching/ple/ws2015/
+    http://seda.cs.uni-kl.de/teaching/suze/ws2015/
+
+--------------------------------------------------------------------
+The work will be tracked on GitHub:
+    https://github.com/avladu/emse-master
